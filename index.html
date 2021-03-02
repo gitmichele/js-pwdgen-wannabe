@@ -11,14 +11,21 @@
 
     <h1 id='main_title'></h1>
 
+    <p id="demo"></p>
+
     <!-- JS -->
     <script>
-        var nome = prompt('Nome')
-        var cognome = prompt('Cognome')
-        var colore = prompt('Colore preferito')
-        console.log(nome, cognome, colore);
+        var nome = prompt('Digita il tuo nome')
+        var cognome = prompt('Digita il tuo Cognome')
+        var colore = prompt('Digita il tuo colore preferito IN INGLESE')
+        var stringToPrint = nome + cognome + colore + '19';
+        var colorToPrint = stringToPrint.fontcolor(colore);
+        document.getElementById('main_title').innerHTML = colorToPrint
 
-        document.getElementById('main_title').innerHTML = nome + cognome + colore + '19'
+
+        // var str = "Hello World!";
+        // var result = str.fontcolor("green");
+        // document.getElementById("demo").innerHTML = result;
     </script>
     
 </body>
